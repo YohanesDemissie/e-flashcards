@@ -118,7 +118,7 @@ export default function AuthForm({ mode }: AuthFormProps) {
               required
               value={displayName}
               onChange={(event) => setDisplayName(event.target.value)}
-              className="w-full rounded-xl border border-[#253D35]/15 bg-white px-4 py-3 outline-none transition focus:border-[#49675A] focus:ring-2 focus:ring-[#49675A]/15"
+              className="w-full rounded-xl border border-[#253D35]/15 bg-white px-4 py-3 outline-none transition focus:border-[#49675A] focus:ring-2 focus:ring-[#49675A]/15 text-[#253D35] placeholder:text-[#253D35]/40"
               placeholder="How should we call you?"
             />
           </div>
@@ -138,7 +138,7 @@ export default function AuthForm({ mode }: AuthFormProps) {
             required
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            className="w-full rounded-xl border border-[#253D35]/15 bg-white px-4 py-3 outline-none transition focus:border-[#49675A] focus:ring-2 focus:ring-[#49675A]/15"
+            className="w-full rounded-xl border border-[#253D35]/15 bg-white px-4 py-3 outline-none transition focus:border-[#49675A] focus:ring-2 focus:ring-[#49675A]/15 text-[#253D35] placeholder:text-[#253D35]/40" 
             placeholder="you@example.com"
           />
         </div>
@@ -158,7 +158,7 @@ export default function AuthForm({ mode }: AuthFormProps) {
             minLength={8}
             value={password}
             onChange={(event) => setPassword(event.target.value)}
-            className="w-full rounded-xl border border-[#253D35]/15 bg-white px-4 py-3 outline-none transition focus:border-[#49675A] focus:ring-2 focus:ring-[#49675A]/15"
+            className="w-full rounded-xl border border-[#253D35]/15 bg-white px-4 py-3 outline-none transition focus:border-[#49675A] focus:ring-2 focus:ring-[#49675A]/15 text-[#253D35] placeholder:text-[#253D35]/40"
             placeholder="At least 8 characters"
           />
         </div>
