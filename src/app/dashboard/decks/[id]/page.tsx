@@ -10,6 +10,7 @@ import StudyFlashcards from "@/components/study-flashcards";
 import { connection } from "next/server";
 import DeleteFlashcardButton from "@/components/delete-flashcard-button";
 import EditFlashcardButton from "@/components/edit-flashcard-button";
+import ReorderFlashcardsButton from "@/components/reorder-flashcards-button";
 
 type DeckPageProps = {
   params: Promise<{ id: string }>;
@@ -186,6 +187,14 @@ async function DeckContent({ params }: DeckPageProps) {
                 <StudyFlashcards
                     deckTitle={deck.title}
                     cards={cardsWithSignedUrls}
+                />
+
+                <ReorderFlashcardsButton
+                    deckId={deck.id}
+                    cards={cardsWithSignedUrls.map((card) => ({
+                        id: card.id,
+                        front_text: card.front_text,
+                    }))}
                 />
 
                 <CreateFlashcardButton
